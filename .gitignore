@@ -1,0 +1,13 @@
+node_modules/
+dist/
+server-dist/
+data/*.db
+data/*.db-shm
+data/*.db-wal
+.env
+.env.local
+public/uploads/*
+!public/uploads/.gitkeep
+qa*.png
+*.log
+.DS_Store

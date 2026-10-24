@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="YS Studio favicon">
+  <defs>
+    <linearGradient id="fGold" x1="120" y1="70" x2="400" y2="454" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF7B0"/>
+      <stop offset="0.28" stop-color="#FFE36A"/>
+      <stop offset="0.6" stop-color="#F6C63D"/>
+      <stop offset="1" stop-color="#996D12"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linejoin="miter" stroke-linecap="square">
+    <path d="M256 32 L450 141 L450 371 L256 480 L62 371 L62 141 Z" stroke="url(#fGold)" stroke-width="36"/>
+    <path d="M148 168 L205 267 L205 412" stroke="url(#fGold)" stroke-width="38"/>
+    <path d="M262 164 L205 267" stroke="url(#fGold)" stroke-width="38"/>
+    <path d="M397 207 C 378 180 338 182 335 211 C 332 241 370 252 381 276 C 394 309 368 343 327 338 C 313 336 304 329 296 321" stroke="url(#fGold)" stroke-width="36"/>
+  </g>
+</svg>

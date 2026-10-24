@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="YS Studio emblem">
+  <defs>
+    <linearGradient id="ysGold" x1="120" y1="70" x2="400" y2="454" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF7B0"/>
+      <stop offset="0.26" stop-color="#FFE36A"/>
+      <stop offset="0.55" stop-color="#F6C63D"/>
+      <stop offset="0.8" stop-color="#C99622"/>
+      <stop offset="1" stop-color="#8C6410"/>
+    </linearGradient>
+    <linearGradient id="ysGoldSoft" x1="160" y1="120" x2="380" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF8C4" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#FFD95B" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#B78616" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="ysShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feOffset dx="0" dy="5" result="offset"/>
+      <feComposite in="SourceGraphic" in2="offset" operator="over"/>
+    </filter>
+  </defs>
+  <g fill="none" stroke-linejoin="miter" stroke-linecap="square">
+    <path d="M256 32 L450 141 L450 371 L256 480 L62 371 L62 141 Z" stroke="url(#ysGold)" stroke-width="32" filter="url(#ysShadow)"/>
+    <path d="M256 72 L416 161 L416 351 L256 440 L96 351 L96 161 Z" stroke="url(#ysGoldSoft)" stroke-width="6" opacity="0.48"/>
+    <path d="M148 168 L205 267 L205 412" stroke="url(#ysGold)" stroke-width="34"/>
+    <path d="M262 164 L205 267" stroke="url(#ysGold)" stroke-width="34"/>
+    <path d="M397 207 C 378 180 338 182 335 211 C 332 241 370 252 381 276 C 394 309 368 343 327 338 C 313 336 304 329 296 321" stroke="url(#ysGold)" stroke-width="32"/>
+  </g>
+</svg>

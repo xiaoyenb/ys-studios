@@ -1,0 +1,17 @@
+FROM node:24-alpine
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV PORT=3001
+ENV SERVE_STATIC_DIR=/app/dist
+
+COPY server-dist ./server-dist
+COPY dist ./dist
+
+RUN printf '{"type":"module","dependencies":{"express":"^5.1.0"}}\n' > package.json \
+ && npm install --omit=dev --ignore-scripts \
+ && mkdir -p /app/data/uploads /app/public \
+ && ln -s /app/data/uploads /app/public/uploads
+
+EXPOSE 3001
+CMD ["node", "server-dist/index.js"]

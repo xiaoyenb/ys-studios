@@ -1,0 +1,37 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: ys-api
+    restart: unless-stopped
+    environment:
+      PORT: 3001
+      YS_ADMIN_USER: ${YS_ADMIN_USER:-admin}
+      YS_ADMIN_PASSWORD: ${YS_ADMIN_PASSWORD:-change-this-password}
+      YS_DB_PATH: /app/data/ys-studio.db
+      CLIENT_ORIGIN: ${CLIENT_ORIGIN:-http://localhost:8080}
+      PUBLIC_API_URL: ${PUBLIC_API_URL:-http://localhost:8080}
+    volumes:
+      - ./data:/app/data
+      - ./public/uploads:/app/public/uploads
+    expose:
+      - "3001"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3001/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+      args:
+        VITE_API_BASE_URL: /api
+    container_name: ys-web
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      - "8080:80"
